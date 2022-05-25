@@ -1,0 +1,24 @@
+{{>partials/header}}
+    <h1>PRODUTOS</h1>
+   <ul>
+    {{#list}}
+      {{partials/producitem}}
+    {{/list}}
+    </ul>
+<hr/>
+<h2>Aparti de 12 reais </h2>
+<ul>
+     {{#expensives}}
+            {{>partials/productitem}}
+     {{/expensives}}    
+</ul> 
+    <ul>
+        {{#frase}}
+           <li> {{.}} </li>
+        {{/frase}}
+        {{^frase}}
+        Não há frases hoje
+        {{/frase}}
+    </ul>
+
+{{>partials/footer}}
